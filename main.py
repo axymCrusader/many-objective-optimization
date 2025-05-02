@@ -123,19 +123,19 @@ def main() -> None:
     B = 0.1
 
     best_point, min_value = monte_carlo_method(f, bounds)
-    print("\n=== Monte Carlo Method Results ===")
-    print(f"Best point found: {best_point}")
-    print(f"Minimum value: {min_value}")
+    print("\n=== Результаты метода Монте-Карло ===")
+    print(f"Найденная оптимальная точка: {best_point}")
+    print(f"Минимальное значение функции: {min_value}")
 
     gd_point, gd_value, iterations = gradient_descent_method(
         f, gradient_f, x0, B, epsilon, bounds
     )
-    print("\n=== Gradient Descent Results ===")
-    print(f"Best point found: {gd_point}")
-    print(f"Minimum value: {gd_value}")
-    print(f"Iterations: {iterations}")
+    print("\n=== Результаты градиентного спуска ===")
+    print(f"Найденная оптимальная точка: {gd_point}")
+    print(f"Минимальное значение функции: {gd_value}")
+    print(f"Количество итераций: {iterations}")
 
-    visualize_function(f, bounds, point=gd_point, point_label="Gradient Descent")
+    visualize_function(f, bounds, point=gd_point, point_label="Градиентный спуск")
 
 
 if __name__ == "__main__":
